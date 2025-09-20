@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Part 1: Button hover effect */
+#hoverBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+#hoverBtn:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
+}
+
+/* Part 3: Box animation */
+#animatedBox {
+    width: 150px;
+    height: 150px;
+    background-color: #e74c3c;
+    margin: 20px auto;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+/* Part 3: Card flip animation */
+.card-container {
+    perspective: 1000px;
+    margin: 20px auto;
+    width: 200px;
+}
+
+.card {
+    width: 200px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card .front, .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.card .front {
+    background-color: #f1c40f;
+}
+
+.card .back {
+    background-color: #8e44ad;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Calculator result */
+#sumResult {
+    margin-top: 10px;
+    font-weight: bold;
+}
